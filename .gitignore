@@ -18,3 +18,4 @@
 /CleanArch.Sql/obj
 /CleanArch.Test/bin/Debug/net6.0
 /CleanArch.Test/obj
+/.vs/CleanArch/config/applicationhost.config
