@@ -17,4 +17,10 @@
     <ProjectReference Include="..\CleanArch.Logging\CleanArch.Logging.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="log4net.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>
