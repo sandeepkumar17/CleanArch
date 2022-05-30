@@ -25,38 +25,27 @@ We will use following tools, technologies, and framework in this sample:
 
 ### Solution and Project setup: ###
 - Once back end is ready, Open Visual Studio 2022 and create a blank solution project, and name it to **CleanArch**.
-
 	<img src="Images/ca_01.png" width="75%">
 
-- **Set Up Core Layer:**
-	- Under the solution, create a new Class Library project and name it **CleanArch.Core**.
-
+- **Set Up Core Layer:** Under the solution, create a new Class Library project and name it **CleanArch.Core**.
 	<img src="Images/ca_02.png" width="75%">
 	
 - **One thing to note down here is, The Core layer should not depend on any other Project or Layer. This is very important while working with Clean Architecture.**
 
-- **Set Up Application Layer:**
-	- Add another Class Library Project and name it **CleanArch.Application**.
-
+- **Set Up Application Layer:** Add another Class Library Project and name it **CleanArch.Application**.
 	<img src="Images/ca_03.png" width="75%">
 
 	- Add a reference to the **Core** project, The Application project always depends only on the **Core** Project.
 
-- **Set Up Logging:**
-	- Add a new Class Library Project (**CleanArch.Logging**)
-
+- **Set Up Logging:** Add a new Class Library Project (**CleanArch.Logging**)
 	<img src="Images/ca_04.png" width="75%">
 
 	- Install the **log4net** package from the Nuget Package Manager and add a reference to the **Application** project 
 
-- **Set Up SQL Project:**
-	- Add a new Class Library Project (**CleanArch.Sql**). We’ll be using this project to manage the Dapper Queries.
-
+- **Set Up SQL Project:** Add a new Class Library Project (**CleanArch.Sql**). We’ll be using this project to manage the Dapper Queries.
 	<img src="Images/ca_05.png" width="75%">
 	
-- **Set Up Infrastructure Layer:**
-	- Add a new Class Library Project and name it **CleanArch.Infrastructure**.
-
+- **Set Up Infrastructure Layer:** Add a new Class Library Project and name it **CleanArch.Infrastructure**.
 	<img src="Images/ca_06.png" width="75%">
 
 	- Add the reference to projects (**Application**, **Core**, and **Sql**), and also add a new folder **Repository**.
@@ -67,9 +56,7 @@ We will use following tools, technologies, and framework in this sample:
 	>     Install-Package Microsoft.Extensions.DependencyInjection.Abstractions
 	>     Install-Package System.Data.SqlClient
 		
-- **Set up API Project:**
-	- Add a new .NET 6.0 Web API project and name it **CleanArch.Api**.
-
+- **Set up API Project:** Add a new .NET 6.0 Web API project and name it **CleanArch.Api**.
 	<img src="Images/ca_07.png" width="75%">
 	<img src="Images/ca_08.png" width="75%">
 	
@@ -84,8 +71,8 @@ We will use following tools, technologies, and framework in this sample:
 		- In .NET 6.0 all these settings will be done under Program.cs file and there is no need to add a separate Startup class.
 	- Set up AuthorizationFilter and controllers.
 
-- **Set up a Test Project:**
-	- Add a new MSTest Test project and name it **CleanArch.Test** and add the below packages.
+- **Set up a Test Project:** Add a new MSTest Test project and name it **CleanArch.Test** and add the below packages.
+
 	>     Install-Package Microsoft.Extensions.Configuration
 	>     Install-Package MSTest.TestFramework
 	>     Install-Package MSTest.TestAdapter
@@ -94,12 +81,10 @@ We will use following tools, technologies, and framework in this sample:
 	<img src="Images/ca_09.png" width="75%">
 
 - Review the project structure in the solution explorer.
-
 	<img src="Images/ca_10.png" width="75%">
 
 ### Build and Run Test Cases: ###
 - Build the solution and run the code coverage, this will run all the test cases and show you the test code coverage.
-
 	<img src="Images/ca_11.png" width="75%">
 
 ### Build and Run Test Cases: ###
