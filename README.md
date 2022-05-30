@@ -21,32 +21,32 @@ We will use following tools, technologies, and framework in this sample:
 - Unit Testing (MSTest Project)
 
 ### DB setup: ###
-- Create a new table that’ll be using to perform the CRUD operation. You can use the scripts shared under the **CleanArch.Sql/Scripts** folder of the code sample.
+- Create a new table that will be used to perform the CRUD operation. You can use the scripts shared under the **CleanArch.Sql/Scripts** folder of the code sample.
 
 ### Solution and Project setup: ###
 - Once back end is ready, Open Visual Studio 2022 and create a blank solution project, and name it to **CleanArch**.
-	<img src="Images/ca_01.png" width="75%">
+	<img src="Images/ca_01.png" width="100%">
 
 - **Set Up Core Layer:** Under the solution, create a new Class Library project and name it **CleanArch.Core**.
-	<img src="Images/ca_02.png" width="75%">
+	<img src="Images/ca_02.png" width="100%">
 	
 - **One thing to note down here is, The Core layer should not depend on any other Project or Layer. This is very important while working with Clean Architecture.**
 
 - **Set Up Application Layer:** Add another Class Library Project and name it **CleanArch.Application**.
-	<img src="Images/ca_03.png" width="75%">
+	<img src="Images/ca_03.png" width="100%">
 
 	- Add a reference to the **Core** project, The Application project always depends only on the **Core** Project.
 
 - **Set Up Logging:** Add a new Class Library Project (**CleanArch.Logging**)
-	<img src="Images/ca_04.png" width="75%">
+	<img src="Images/ca_04.png" width="100%">
 
 	- Install the **log4net** package from the Nuget Package Manager and add a reference to the **Application** project 
 
 - **Set Up SQL Project:** Add a new Class Library Project (**CleanArch.Sql**). We’ll be using this project to manage the Dapper Queries.
-	<img src="Images/ca_05.png" width="75%">
+	<img src="Images/ca_05.png" width="100%">
 	
 - **Set Up Infrastructure Layer:** Add a new Class Library Project and name it **CleanArch.Infrastructure**.
-	<img src="Images/ca_06.png" width="75%">
+	<img src="Images/ca_06.png" width="100%">
 
 	- Add the reference to projects (**Application**, **Core**, and **Sql**), and also add a new folder **Repository**.
 
@@ -57,8 +57,8 @@ We will use following tools, technologies, and framework in this sample:
 	>     Install-Package System.Data.SqlClient
 		
 - **Set up API Project:** Add a new .NET 6.0 Web API project and name it **CleanArch.Api**.
-	<img src="Images/ca_07.png" width="75%">
-	<img src="Images/ca_08.png" width="75%">
+	<img src="Images/ca_07.png" width="100%">
+	<img src="Images/ca_08.png" width="100%">
 	
 	- Add the reference to projects (**Application**, **Infrastructure**, and **Logging**), and also add the **Swashbuckle.AspNetCore** package.
 	>     Install-Package Dapper
@@ -78,14 +78,14 @@ We will use following tools, technologies, and framework in this sample:
 	>     Install-Package MSTest.TestAdapter
 	>     Install-Package Moq
 
-	<img src="Images/ca_09.png" width="75%">
+	<img src="Images/ca_09.png" width="100%">
 
 - Review the project structure in the solution explorer.
-	<img src="Images/ca_10.png" width="75%">
+	<img src="Images/ca_10.png" width="100%">
 
 ### Build and Run Test Cases: ###
 - Build the solution and run the code coverage, this will run all the test cases and show you the test code coverage.
-	<img src="Images/ca_11.png" width="75%">
+	<img src="Images/ca_11.png" width="100%">
 
 ### Build and Run Test Cases: ###
 Run the project and test all the CRUD API methods. (Make sure **CleanArch.Api** is set as a startup project)
@@ -93,7 +93,7 @@ Run the project and test all the CRUD API methods. (Make sure **CleanArch.Api** 
 - Swagger UI
 	<img src="Images/ca_12.png" width="100%">
 
-- Run Get All without authentication throws error.
+- Running API without authentication throws error.
 	<img src="Images/ca_13.png" width="100%">
 
 - Add API Authorization.
