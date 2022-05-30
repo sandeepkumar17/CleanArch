@@ -164,7 +164,7 @@ namespace CleanArch.Api.Controllers
 
             return apiResponse;
         }
-    }
 
-    #endregion
+        #endregion
+    }
 }
