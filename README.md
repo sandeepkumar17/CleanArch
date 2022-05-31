@@ -2,7 +2,7 @@
 
 ### Introduction ###
 
-This article covers creation of sample CRUD API in .NET 6.0 using clean architecture.
+This article covers creation of sample CRUD API in .NET 6.0 using clean architecture. [Read the full documentation here](https://dev.to/techiesdiary/net-60-clean-architecture-using-repository-pattern-and-dapper-with-logging-and-unit-testing-1nd9)
 
 We will use following tools, technologies, and framework in this sample:
 

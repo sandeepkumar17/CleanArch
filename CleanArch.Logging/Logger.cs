@@ -21,14 +21,6 @@ namespace CleanArch.Logging
 
         #endregion
 
-        #region ===[ Constructor ]=================================================================
-
-        private Logger()
-        {
-        }
-
-        #endregion
-
         #region ===[ Properties ]==================================================================
 
         /// <summary>
@@ -199,21 +191,6 @@ namespace CleanArch.Logging
             }
 
             return mesgAndStackTrace + Environment.NewLine;
-        }
-
-        public void Log(Type callerStackBoundaryDeclaringType, Level level, object message, Exception exception)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Log(LoggingEvent logEvent)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool IsEnabledFor(Level level)
-        {
-            throw new NotImplementedException();
         }
 
         #endregion
