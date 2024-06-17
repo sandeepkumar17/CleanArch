@@ -2,15 +2,15 @@
 
 ### Introduction ###
 
-This article covers creation of sample CRUD API in .NET 6.0 using clean architecture. [Read the full documentation here](https://dev.to/techiesdiary/net-60-clean-architecture-using-repository-pattern-and-dapper-with-logging-and-unit-testing-1nd9)
+This article covers the creation of a sample CRUD API in .NET 6.0 using clean architecture. [Read the full documentation here](https://dev.to/techiesdiary/net-60-clean-architecture-using-repository-pattern-and-dapper-with-logging-and-unit-testing-1nd9)
 
-We will use following tools, technologies, and framework in this sample:
+We will use the following tools, technologies, and frameworks in this sample:
 
 - Visual Studio 2022 and .NET 6.0
 - C#
 - MS SQL DB
 - Clean Architecture
-	- The Clean Architecture is the system architecture guideline proposed by Robert C. Martin also known as Uncle Bob. It derived from many architectural guidelines such as Hexagonal Architecture, Onion Architecture, etc.
+	- The Clean Architecture is the system architecture guideline proposed by Robert C. Martin also known as Uncle Bob. It is derived from many architectural guidelines such as Hexagonal Architecture, Onion Architecture, etc.
 - Dapper (mini ORM)
 	- Dapper is a simple Object Mapper or a Micro-ORM and is responsible for mapping between database and programming language.
 - Repository Pattern
@@ -23,14 +23,14 @@ We will use following tools, technologies, and framework in this sample:
 ### DB setup: ###
 - Create a new table that will be used to perform the CRUD operation. You can use the scripts shared under the **CleanArch.Sql/Scripts** folder of the code sample.
 
-### Solution and Project setup: ###
-- Once back end is ready, Open Visual Studio 2022 and create a blank solution project, and name it to **CleanArch**.
+### Solution and Project Setup: ###
+- Once the back end is ready, Open Visual Studio 2022, and create a blank solution project, and name it **CleanArch**.
 	<img src="Images/ca_01.png" width="100%">
 
 - **Set Up Core Layer:** Under the solution, create a new Class Library project and name it **CleanArch.Core**.
 	<img src="Images/ca_02.png" width="100%">
 	
-- **One thing to note down here is, The Core layer should not depend on any other Project or Layer. This is very important while working with Clean Architecture.**
+- **One thing to note down here is that the Core layer should not depend on any other Project or Layer. This is very important while working with Clean Architecture.**
 
 - **Set Up Application Layer:** Add another Class Library Project and name it **CleanArch.Application**.
 	<img src="Images/ca_03.png" width="100%">
@@ -40,9 +40,9 @@ We will use following tools, technologies, and framework in this sample:
 - **Set Up Logging:** Add a new Class Library Project (**CleanArch.Logging**)
 	<img src="Images/ca_04.png" width="100%">
 
-	- Install the **log4net** package from the Nuget Package Manager and add a reference to the **Application** project 
+	- Install the **log4net** package from the NuGet Package Manager and add a reference to the **Application** project 
 
-- **Set Up SQL Project:** Add a new Class Library Project (**CleanArch.Sql**). We’ll be using this project to manage the Dapper Queries.
+- **Set Up SQL Project:** Add a new Class Library Project (**CleanArch.Sql**). Weâ€™ll be using this project to manage the Dapper Queries.
 	<img src="Images/ca_05.png" width="100%">
 	
 - **Set Up Infrastructure Layer:** Add a new Class Library Project and name it **CleanArch.Infrastructure**.
@@ -67,7 +67,7 @@ We will use following tools, technologies, and framework in this sample:
 	>     Install-Package System.Data.SqlClient
 
 	- Set up the appsettings.json and log4net.config (for logging).
-	- Configure Startup settings, such as RegisterServices (defined under **CleanArch.Infrastructure** project), configure log4net and add the Swagger UI (with authentication scheme).
+	- Configure Startup settings, such as RegisterServices (defined under **CleanArch.Infrastructure** project), configure log4net, and add the Swagger UI (with authentication scheme).
 		- In .NET 6.0 all these settings will be done under Program.cs file and there is no need to add a separate Startup class.
 	- Set up AuthorizationFilter and controllers.
 
@@ -93,7 +93,7 @@ Run the project and test all the CRUD API methods. (Make sure **CleanArch.Api** 
 - Swagger UI
 	<img src="Images/ca_12.png" width="100%">
 
-- Running API without authentication throws error.
+- Running API without authentication throws an error.
 	<img src="Images/ca_13.png" width="100%">
 
 - Add API Authorization.
