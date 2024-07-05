@@ -198,7 +198,7 @@ namespace CleanArch.Test.IntegrationTests
 
             Assert.IsNotNull(result);
             Assert.IsTrue(result.Success);
-            Assert.IsTrue(result.Result.Count > 0);
+            Assert.IsTrue(result.Result?.Count > 0);
 
             var contact = result.Result
                             .Where(x => x.FirstName == TestConstants.ContactTest.FirstName

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Data.SqlClient;
-using System.Runtime.Serialization;
 
 namespace CleanArch.Test.Helper
 {
@@ -8,7 +7,7 @@ namespace CleanArch.Test.Helper
     {
         public static SqlException GetSqlException()
         {
-            var sqlException = FormatterServices.GetUninitializedObject(typeof(SqlException)) as SqlException;
+            var sqlException = System.Runtime.CompilerServices.RuntimeHelpers.GetUninitializedObject(typeof(SqlException)) as SqlException;
 
             return sqlException;
         }
