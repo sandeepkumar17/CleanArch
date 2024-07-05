@@ -1,4 +1,4 @@
-# .NET8.0 - Clean Architecture using Repository Pattern and Dapper with Logging and Unit Testing #
+# .NET 8.0 - Clean Architecture using Repository Pattern and Dapper with Logging and Unit Testing #
 
 ### Introduction ###
 
@@ -29,7 +29,7 @@ We will use the following tools, technologies, and frameworks in this sample:
 
 - **Set Up Core Layer:** Under the solution, create a new Class Library project and name it **CleanArch.Core**.
 	<img src="Images/ca_02.png" width="100%">
-	
+
 - **One thing to note down here is that the Core layer should not depend on any other Project or Layer. This is very important while working with Clean Architecture.**
 
 - **Set Up Application Layer:** Add another Class Library Project and name it **CleanArch.Application**.
@@ -56,7 +56,7 @@ We will use the following tools, technologies, and frameworks in this sample:
 	>     Install-Package Microsoft.Extensions.DependencyInjection.Abstractions
 	>     Install-Package System.Data.SqlClient
 		
-- **Set up API Project:** Add a new .NET 6.0 Web API project and name it **CleanArch.Api**.
+- **Set up API Project:** Add a new .NET 8.0 Web API project and name it **CleanArch.Api**.
 	<img src="Images/ca_07.png" width="100%">
 	<img src="Images/ca_08.png" width="100%">
 	
@@ -68,7 +68,7 @@ We will use the following tools, technologies, and frameworks in this sample:
 
 	- Set up the appsettings.json and log4net.config (for logging).
 	- Configure Startup settings, such as RegisterServices (defined under **CleanArch.Infrastructure** project), configure log4net, and add the Swagger UI (with authentication scheme).
-		- In .NET 6.0 all these settings will be done under Program.cs file and there is no need to add a separate Startup class.
+		- In .NET 8.0 all these settings will be done under Program.cs file and there is no need to add a separate Startup class.
 	- Set up AuthorizationFilter and controllers.
 
 - **Set up a Test Project:** Add a new MSTest Test project and name it **CleanArch.Test** and add the below packages.
