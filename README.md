@@ -1,12 +1,12 @@
-# .NET6.0 - Clean Architecture using Repository Pattern and Dapper with Logging and Unit Testing #
+# .NET8.0 - Clean Architecture using Repository Pattern and Dapper with Logging and Unit Testing #
 
 ### Introduction ###
 
-This article covers the creation of a sample CRUD API in .NET 6.0 using clean architecture. [Read the full documentation here](https://dev.to/techiesdiary/net-60-clean-architecture-using-repository-pattern-and-dapper-with-logging-and-unit-testing-1nd9)
+This article covers the creation of a sample CRUD API in .NET 8.0 using clean architecture. [Read the full documentation here](https://dev.to/techiesdiary/net-60-clean-architecture-using-repository-pattern-and-dapper-with-logging-and-unit-testing-1nd9)
 
 We will use the following tools, technologies, and frameworks in this sample:
 
-- Visual Studio 2022 and .NET 6.0
+- Visual Studio 2022 and .NET 8.0
 - C#
 - MS SQL DB
 - Clean Architecture
