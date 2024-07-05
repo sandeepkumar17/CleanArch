@@ -2,20 +2,19 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/.vs/CleanArch/v17
-/CleanArch.Api/bin/Debug/net6.0
+/.vs/CleanArch
+/CleanArch.Api/bin/
 /CleanArch.Api/obj
 /CleanArch.Api/CleanArch.Api.csproj.user
-/CleanArch.Application/bin/Debug/net6.0
+/CleanArch.Application/bin/
 /CleanArch.Application/obj
-/CleanArch.Core/bin/Debug/net6.0
+/CleanArch.Core/bin/
 /CleanArch.Core/obj
-/CleanArch.Infrastructure/bin/Debug/net6.0
+/CleanArch.Infrastructure/bin/
 /CleanArch.Infrastructure/obj
-/CleanArch.Logging/bin/Debug/net6.0
+/CleanArch.Logging/bin/
 /CleanArch.Logging/obj
-/CleanArch.Sql/bin/Debug/net6.0
+/CleanArch.Sql/bin/
 /CleanArch.Sql/obj
-/CleanArch.Test/bin/Debug/net6.0
+/CleanArch.Test/bin/
 /CleanArch.Test/obj
-/.vs/CleanArch/config/applicationhost.config

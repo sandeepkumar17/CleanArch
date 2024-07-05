@@ -11,7 +11,7 @@ namespace CleanArch.Logging
     {
         #region ===[ Private Members ]=============================================================
 
-        private static readonly ILog _logger = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
+        private static readonly ILog _logger = LogManager.GetLogger(MethodBase.GetCurrentMethod()?.DeclaringType);
         private static readonly Lazy<Logger> _loggerInstance = new Lazy<Logger>(() => new Logger());
 
         private const string ExceptionName = "Exception";

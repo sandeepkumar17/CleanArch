@@ -31,8 +31,8 @@ namespace CleanArch.Infrastructure.Repository
         {
             using (IDbConnection connection = new SqlConnection(configuration.GetConnectionString("DBConnection")))
             {
-                connection.Open();
                 var result = await connection.QueryAsync<Contact>(ContactQueries.AllContact);
+
                 return result.ToList();
             }
         }
@@ -41,8 +41,8 @@ namespace CleanArch.Infrastructure.Repository
         {
             using (IDbConnection connection = new SqlConnection(configuration.GetConnectionString("DBConnection")))
             {
-                connection.Open();
                 var result = await connection.QuerySingleOrDefaultAsync<Contact>(ContactQueries.ContactById, new { ContactId = id });
+
                 return result;
             }
         }
@@ -51,8 +51,8 @@ namespace CleanArch.Infrastructure.Repository
         {
             using (IDbConnection connection = new SqlConnection(configuration.GetConnectionString("DBConnection")))
             {
-                connection.Open();
                 var result = await connection.ExecuteAsync(ContactQueries.AddContact, entity);
+
                 return result.ToString();
             }
         }
@@ -61,8 +61,8 @@ namespace CleanArch.Infrastructure.Repository
         {
             using (IDbConnection connection = new SqlConnection(configuration.GetConnectionString("DBConnection")))
             {
-                connection.Open();
                 var result = await connection.ExecuteAsync(ContactQueries.UpdateContact, entity);
+
                 return result.ToString();
             }
         }
@@ -71,8 +71,8 @@ namespace CleanArch.Infrastructure.Repository
         {
             using (IDbConnection connection = new SqlConnection(configuration.GetConnectionString("DBConnection")))
             {
-                connection.Open();
                 var result = await connection.ExecuteAsync(ContactQueries.DeleteContact, new { ContactId = id });
+
                 return result.ToString();
             }
         }
